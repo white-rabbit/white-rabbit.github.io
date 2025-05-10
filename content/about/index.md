@@ -49,9 +49,8 @@ I definitely got to know what crunch is...
 Now I am a backend developer and mostly focused on real-time data
 analytics pipeline.
 
-Lately I started enjoying Rust.
-
 Participated in several [video game creating jams](https://ldjam.com/users/savegor/games).
 
 Love [shadertoy](https://www.shadertoy.com/user/savegor).
 
+Lately I started enjoying Rust.

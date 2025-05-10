@@ -1,6 +1,6 @@
 ---
 title: "The Wheel"
-date: 2023-10-05T19:04:25+02:00
+date: 2025-05-05T19:04:25+02:00
 draft: false
 tags: ["graphics", "physics", "simulation"]
 categories: ["Modeling"]
