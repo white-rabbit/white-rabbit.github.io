@@ -1,9 +1,9 @@
 ---
-title: "The Wheel"
+title: "Reinventing the wheel"
 date: 2025-05-05T19:04:25+02:00
 draft: false
 tags: ["graphics", "physics", "simulation"]
-categories: ["Modeling"]
+categories: ["Numeric simulation"]
 author: savegor
 ---
 
@@ -11,6 +11,7 @@ Many years ago I did a nice exercise: implemented a simple wheel physics simulat
 I remember it was unexpectedly satisfying to see such a simple thing working!
 There is a genuine magic when you form a small reality from a dozen numbers...
 
+{{<figure class="default" src="/images/wheel_preview.png" alt="Reinventing the wheel.">}}
 
 Long story short, I spent an evening or two (or more) recreating that project.
 I obviously wanted to implement it in Rust
