@@ -5,13 +5,16 @@ draft: false
 tags: ["graphics", "physics", "simulation"]
 categories: ["Numeric simulation"]
 author: savegor
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
+lightgallery: true
+
 ---
 
 Many years ago I did a nice exercise: implemented a simple wheel physics simulator.
 I remember it was unexpectedly satisfying to see such a simple thing working!
 There is a genuine magic when you form a small reality from a dozen numbers...
-
-{{<figure class="default" src="/images/wheel_preview.png" alt="Reinventing the wheel.">}}
 
 Long story short, I spent an evening or two (or more) recreating that project.
 I obviously wanted to implement it in Rust

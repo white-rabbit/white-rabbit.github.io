@@ -5,6 +5,11 @@ draft: false
 tags: ["shaders", "art", "graphics"]
 categories: ["Graphics"]
 author: savegor
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
+lightgallery: true
+
 ---
 
 [Shadertoy](https://www.shadertoy.com/) is an excellent tool not only to

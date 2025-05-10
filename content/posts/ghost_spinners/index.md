@@ -5,14 +5,17 @@ draft: false
 tags: ["shadertoy", "graphics"]
 categories: ["Graphics"]
 author: savegor
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
+lightgallery: true
 ---
 Sometimes one can create something absolutely obscure.
 
-{{<figure class="default" src="/images/spinners_preview.png" alt="Spinners.">}}
+Ideas mix in an unpredictable way...
 
-# Live Ghost Spinners
+Mind jumps from one idea to other and eventually you end up with something like that:
 
-Below is the interactive version, as usual based on shadertoy:
 {{< shadertoy id="tstyzl" >}}
 
 Use mouse to move the emitter. Click twice for fullscreen.

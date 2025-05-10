@@ -5,9 +5,12 @@ draft: false
 tags: ["shadertoy", "graphics", "physics", "simulation"]
 categories: ["Numeric simulation"]
 author: savegor
----
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
+lightgallery: true
 
-{{<figure class="default" src="/images/instability_preview.png" alt="Tiny world.">}}
+---
 
 Computational instability is the thing that reveals the irreducable gap between
 a mathematical model and a simulation. A mathematical model can describe a really
