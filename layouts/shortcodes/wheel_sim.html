@@ -1,0 +1,9 @@
+{{ with .Get "id" }}
+<script type="module">
+  import init from "{{ . }}"
+    init()
+</script>
+<canvas id="mygame-canvas"
+style="box-shadow: 0px 5px 10px rgb(0, 175, 255); margin-bottom: 10px; margin-top: 10px; width: 100%;"
+></canvas>
+{{ end }}

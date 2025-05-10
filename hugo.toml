@@ -1,0 +1,118 @@
+baseURL = "https://white-rabbit.github.io"
+theme = "LoveIt"
+title = "savegor"
+
+languageCode = "en"
+languageName = "English"
+
+enableEmoji = true
+enableInlineShortcodes = true
+
+# Author config
+[author]
+  name = "savegor"
+  email = "savostyanov.gv@gmail.com"
+  link = ""
+
+[params]
+    title = "savegor"
+    [params.header.title]
+      # URL of the LOGO
+      logo = ""
+      # title name
+      name = "savegor"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      pre = ""
+      # you can add extra information after the name (HTML format is supported), such as icons
+      post = ""
+      # whether to use typeit animation for title name
+      typeit = false
+
+# Home Page
+ [params.home]
+    # amount of RSS pages
+    rss = 10
+    # Home page profile
+    [params.home.profile]
+      enable = true
+      # Gravatar Email for preferred avatar in home page
+      gravatarEmail = ""
+      # URL of avatar shown in home page
+      avatarURL = "images/avatar.jpg"
+      # title shown in home page (HTML format is supported)
+      title = ""
+      # subtitle shown in home page (HTML format is supported)
+      subtitle = "Hello, friend"
+      # whether to use typeit animation for subtitle
+      typeit = true
+      # whether to show social links
+      social = true
+      # disclaimer (HTML format is supported)
+      disclaimer = ""
+    # Home page posts
+    [params.home.posts]
+      enable = true
+      # special amount of posts in each home posts page
+      paginate = 6
+
+ # Social config in home page
+[params.social]
+  Linkedin = "savegor"
+  Github = "white-rabbit"
+
+# TODO(savegor): add shadertoy
+# [[params.social]]
+#     name = "Shadertoy"
+#     image = "/images/social/shadertoy.png"
+#     weight = 4
+#     url = "https://www.shadertoy.com/user/savegor"
+
+# Menu config
+[menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
+    title = ""
+  [[menu.main]]
+    weight = 2
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+  [[menu.main]]
+    weight = 3
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+  [[menu.main]]
+    weight = 4
+    identifier = "about"
+    pre = ""
+    post = ""
+    name = "About"
+    url = "/about/"
+    title = ""
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+
+# These settings are added for Github pages
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
