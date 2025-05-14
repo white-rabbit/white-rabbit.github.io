@@ -1,15 +1,13 @@
 ---
 title: "Shadertoy"
-date: 2023-10-05T19:04:25+02:00
+date: 2023-10-05
+summary: Shadertoy is an excellent tool not only to experiment with shaders but in some cases even do real art!
 draft: false
 tags: ["shaders", "art", "graphics"]
 categories: ["Graphics"]
 author: savegor
-resources:
-- name: "featured-image"
-  src: "featured-image.png"
-lightgallery: true
-
+cardimage: shadertoy.png
+caption: Image caption
 ---
 
 [Shadertoy](https://www.shadertoy.com/) is an excellent tool not only to

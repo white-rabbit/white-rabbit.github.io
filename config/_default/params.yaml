@@ -1,0 +1,86 @@
+############################
+## Author
+############################
+
+author:
+  name: 'Egor Savostyanov'
+  image: author.png
+  greeting: 'My thoughts and more.'
+  # icon: ':wave:'
+
+############################
+## Links
+############################
+
+links:
+  - github: https://github.com/white-rabbit
+  # - facebook: 
+  # - x-twitter:
+  # - mastodon:
+  - linkedin: https://linkedin.com/in/savegor
+  # - instagram: 
+  # - reddit:
+  # - telegram:
+  # - whatsapp:
+  # - signal:
+  # - codepen:
+  # - dev:
+  - email: mailto:savostyanov.gv@gmail.com
+  - website: https://white-rabbit.github.io
+  # - link:
+  # - discord:
+  # - orcid:
+  # - slack:
+  # - stack-overflow:
+  # - twitch:
+  # - patreon:
+  # - soundcloud:
+  # - dribbble:
+  # - stack-exchange:
+  # - tiktok:
+  # - youtube:
+  # - keybase:
+  # - flickr:
+  # - tumblr:
+  # - kickstarter:
+  # - snapchat:
+  # - bluesky:
+  # - bitbucket:
+  # - bandcamp:
+  # - etsy:
+  # - spotify:
+  # - pinterest:
+  # - strava:
+  # - untappd:
+  # - skype:
+  # - medium:
+  # - foursquare:
+  # - apple:
+  # - amazon:
+  # - google:
+  # - paypal:
+  # - pgp-key:
+  # - windows:
+
+###############################
+## OpenGraph & Twitter Cards
+###############################
+
+title: 'Egor Savostyanov'
+description: 'My thoughts and more.'
+images:
+  - thumbnail.png
+
+###############################
+## Latex math
+###############################
+
+# To configure Latex rendering on all pages, change to: true
+#
+# To only add Latex rendering on pages that need it, set in the frontmatter
+# of each page that needs it:
+#   params:
+#     math: true
+# This option will allow better performance, as it'll only load
+# the extra JS when needed.
+math: false

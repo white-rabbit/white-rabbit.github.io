@@ -1,0 +1,14 @@
+############################
+## Navbar
+############################
+
+main:
+- name: Home
+  url: /
+  weight: 10
+- name: Posts
+  url: /posts/
+  weight: 20
+- name: About
+  url: /about/
+  weight: 30

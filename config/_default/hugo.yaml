@@ -1,0 +1,14 @@
+baseURL: 'https://white-rabbit.github.io'
+title: 'savegor'
+
+############################
+## MISC
+############################
+
+enableEmoji: true
+disableKinds: ['taxonomy', 'term']
+languageCode: 'en-us'
+enableRobotsTXT: true
+
+markup:
+  _merge: deep

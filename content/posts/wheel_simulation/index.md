@@ -1,15 +1,12 @@
 ---
 title: "Reinventing the wheel"
-date: 2025-05-05T19:04:25+02:00
+date: 2025-05-05
 draft: false
+summary: "Many years ago I did a nice exercise: implemented a simple wheel physics simulator."
 tags: ["graphics", "physics", "simulation"]
 categories: ["Numeric simulation"]
 author: savegor
-resources:
-- name: "featured-image"
-  src: "featured-image.png"
-lightgallery: true
-
+cardimage: wheel_sim.png
 ---
 
 Many years ago I did a nice exercise: implemented a simple wheel physics simulator.

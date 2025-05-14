@@ -1,14 +1,12 @@
 ---
 title: "Ghost Spinners"
-date: 2023-11-10T23:03:25+02:00
+date: 2023-11-10
 draft: false
+summary: Sometimes one can create something absolutely obscure.
 tags: ["shadertoy", "graphics"]
 categories: ["Graphics"]
 author: savegor
-resources:
-- name: "featured-image"
-  src: "featured-image.png"
-lightgallery: true
+cardimage: ghost-spinners.png
 ---
 Sometimes one can create something absolutely obscure.
 
