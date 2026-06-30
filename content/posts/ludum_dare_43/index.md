@@ -33,5 +33,8 @@ Then after two days (and nights) in [Unity](https://unity.com/) (hello C#) with 
 Luckily we had an infinite supply of pizza, otherwise
 we could have run out of fuel. :grin:
 
-The project's [Ludum Dare web page](https://ldjam.com/events/ludum-dare/43/the-astonishing-airscapade-of-sir-bittergloom).
 
+To play the game in your browser please click the [link](/hidden/ast).
+Be careful the title screen music starts immediatelly!
+
+The project's [Ludum Dare web page](https://ldjam.com/events/ludum-dare/43/the-astonishing-airscapade-of-sir-bittergloom).

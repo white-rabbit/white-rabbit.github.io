@@ -26,13 +26,13 @@ I also have a page on [shadertoy](https://www.shadertoy.com/user/savegor).
 These are usually small experiments with physics.
 
 But, for example, I implemented the Conway's Game of Life:
-{{< shadertoy id="3tSyWm" >}}
+{{< shadertoy name="game-of-life" height="500px" >}}
 
 As you can see with shadertoy you can easily do some tricks,
 like displaying the Game of Life on the Voronoi's grid.
 The cells in this representation are even more ... well... alive :wink: :
 
-{{< shadertoy id="WsdcWN" >}}
+{{< shadertoy name="game-of-life-voronoi" height="500px" >}}
 
 I seriously doubt that the idea of making such a mix ever
 occurred to me without this amazing tool!

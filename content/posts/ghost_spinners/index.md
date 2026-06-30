@@ -14,6 +14,6 @@ Ideas mix in an unpredictable way...
 
 Mind jumps from one idea to other and eventually you end up with something like that:
 
-{{< shadertoy id="tstyzl" >}}
+{{< shadertoy name="ghost-spinners" height="700px" >}}
 
-Use mouse to move the emitter. Click twice for fullscreen.
+Use mouse to move the emitter.

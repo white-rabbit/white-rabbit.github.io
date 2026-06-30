@@ -1,13 +1,68 @@
-{{ with .Get "id" }}
-<iframe
-    src="//www.shadertoy.com/embed/{{ . }}?paused=false"
-    title="ShaderToy Shader"
-    height="400"
-    frameborder="0"
-    marginwidth="0"
-    marginheight="0"
-    scrolling="no"
-    style="box-shadow: 0px 0px 0px rgb(0, 175, 255); margin-bottom: 20px; margin-top: 20px; width: 100%;"
-    allowfullscreen="true">
-</iframe>
-{{ end }}
+{{/*
+  Generic Shadertoy-style embed.
+
+  Usage:
+    {{< shadertoy name="game-of-life" >}}
+    {{< shadertoy name="adv-2024" height="500" >}}
+    {{< shadertoy name="game-of-life" noreset >}}
+
+  Required param:
+    name  - folder under /static/shaders/<name>/ containing image.glsl
+            and optional bufferA..bufferD.glsl files.
+
+  Optional params:
+    height     - container height in CSS units (default "500px").
+    buffers    - comma-separated list of buffer pass names to look for
+                 (default "bufferA,bufferB,bufferC,bufferD"). Any pass
+                 whose .glsl is missing on the server is silently skipped.
+    paused     - if present and truthy, start paused.
+    noreset    - if present, hide the restart button.
+    nocontrols - if present, hide the entire control bar.
+    maxwidth   - optional max-width (CSS), e.g. "900px".
+
+  Each shader file must define:
+    void mainImage(out vec4 fragColor, in vec2 fragCoord)
+  The engine injects iTime, iFrame, iResolution and iChannel0..3.
+*/}}
+
+{{- $name      := .Get "name" | default (.Get 0) -}}
+{{- $height    := .Get "height" | default "500px" -}}
+{{- $maxWidth  := .Get "maxwidth" | default "" -}}
+{{- $buffers   := .Get "buffers" | default "bufferA,bufferB,bufferC,bufferD" -}}
+{{- $startPaused := or (.Get "paused") (.Get "paused") -}}
+{{- $showReset := not (.Get "noreset") -}}
+{{- $showCtrl  := not (.Get "nocontrols") -}}
+{{- $uid       := printf "st-%s-%d" $name now.UnixNano -}}
+
+<div id="{{ $uid }}" class="st-host"
+     data-name="{{ $name }}"
+     data-buffers="{{ $buffers }}"
+     data-paused="{{ if $startPaused }}1{{ end }}"
+     data-show-reset="{{ $showReset }}"
+     data-show-controls="{{ $showCtrl }}"
+     style="width:100%;{{ with $maxWidth }} max-width:{{ . }};{{ end }} height:{{ $height }}; box-shadow:0 0 0 rgb(0,175,255); margin:20px 0; background:#000;"></div>
+
+<style>.st-host .st-controls{position:absolute;top:8px;right:8px;display:flex;gap:4px;z-index:2;opacity:.55;transition:opacity .15s ease}.st-host:hover .st-controls{opacity:1}.st-host .st-controls button{appearance:none;background:rgba(0,0,0,.55);color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:4px;width:28px;height:28px;font-size:14px;line-height:1;cursor:pointer;padding:0;display:inline-flex;align-items:center;justify-content:center}.st-host .st-controls button:hover{background:rgba(0,0,0,.8)}.st-host .st-controls [hidden]{display:none!important}.st-host .st-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#cbd5e1;font-family:ui-sans-serif,system-ui,sans-serif;text-align:center;padding:16px}.st-host .st-placeholder-box{border:1px dashed rgba(203,213,225,.4);border-radius:8px;padding:14px 20px;background:rgba(15,23,42,.45)}.st-host .st-placeholder-title{font-size:14px;font-weight:600;margin-bottom:6px;color:#e2e8f0}.st-host .st-placeholder-body{font-size:12px;line-height:1.5;color:#94a3b8}.st-host .st-placeholder code{background:rgba(0,0,0,.4);padding:1px 5px;border-radius:3px;font-size:11px}</style>
+
+<script type="module">
+  import { createShadertoy } from "/js/shadertoy-multipass.js";
+
+  const el = document.getElementById("{{ $uid }}");
+  const buffers = (el.dataset.buffers || "")
+    .split(",").map(s => s.trim()).filter(Boolean);
+
+  createShadertoy({
+    container:    el,
+    path:         "/shaders/" + el.dataset.name,
+    buffers:      buffers,
+    paused:       el.dataset.paused === "1",
+    showControls: el.dataset.showControls !== "false",
+  }).then(inst => {
+    if (!inst) return;
+    if (el.dataset.showReset === "false" && inst._syncControls) {
+      const btn = el.querySelector('.st-controls [data-act="reset"]');
+      if (btn) btn.remove();
+    }
+    el._shaderInstance = inst;
+  }).catch(err => console.error("[shadertoy]", err));
+</script>

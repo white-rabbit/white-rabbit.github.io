@@ -1,0 +1,8 @@
+{
+  "passes": [
+    {
+      "name": "image",
+      "file": "image.glsl"
+    }
+  ]
+}

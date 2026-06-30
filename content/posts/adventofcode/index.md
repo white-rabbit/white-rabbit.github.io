@@ -34,6 +34,6 @@ Eventually it was a nice and refreshing experience to me who usually don't have 
 
 I also visualised one of the tasks in Shadertoy, (the main challenge was to pack the task input data directly in the code!):
 
-{{< shadertoy id="M33yRl" >}}
+{{< shadertoy name="adv-2024" height="360px" >}}
 
 Github repository with my solutions is [here](https://github.com/white-rabbit/adventofcode/tree/main/2024).

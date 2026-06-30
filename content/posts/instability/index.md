@@ -16,6 +16,6 @@ complex system, but there is usually no analytical solution...
 The only way available to us is numerical simulation. It alows us to see the shadow
 of the model, but never - the model itself. It usually enough, but it is never real.
 
-{{< shadertoy id="WtXBWB" >}}
+{{< shadertoy name="crazy-sun-system" height="600px" >}}
 
-Use mouse to interact with the tiny unstable world above. Click twice for fullscreen.
+Use mouse to interact with the tiny unstable world above.

@@ -1,0 +1,18 @@
+{
+  "passes": [
+    {
+      "name": "bufferA",
+      "file": "bufferA.glsl",
+      "channels": {
+        "iChannel0": { "source": "bufferA", "filter": "nearest", "wrap": "clamp" }
+      }
+    },
+    {
+      "name": "image",
+      "file": "image.glsl",
+      "channels": {
+        "iChannel0": { "source": "bufferA", "filter": "nearest", "wrap": "clamp" }
+      }
+    }
+  ]
+}
